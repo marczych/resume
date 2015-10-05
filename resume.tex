@@ -49,14 +49,23 @@
 }
 \newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
 \newcommand{\resheading}[1]{
+   \vspace{4pt}
    {\Large #1}
    \ressectiondivider
+   \vspace{10pt}
 }
 \newcommand{\ressubheading}[4]{
-   \begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
-         \textbf{#1} & #2 \\
-         \textit{#3} & \textit{#4} \\
-   \end{tabular*}\vspace{-6pt}
+   \begin{minipage}[t]{7cm}
+      \flushleft
+      \textbf{#1}\\
+      \textit{#3}\\
+   \end{minipage}
+   \hfill
+   \begin{minipage}[t]{7cm}
+      \flushright
+      #2\\
+      \textit{#4}\\
+   \end{minipage}
 }
 %-----------------------------------------------------------
 
@@ -68,55 +77,49 @@
 \vspace{20pt}
 
 \resheading{Education}
+\ressubheading{California Polytechnic State University}{San Luis Obispo, CA}{Master of Science in Computer Science}{June 2013}
 \begin{itemize}
-\item
-   \ressubheading{California Polytechnic State University}{San Luis Obispo, CA}{Master of Science in Computer Science}{June 2013}
-   \begin{itemize}
-      \resitem{Thesis: An Analysis of Generational Caching Implemented in a Production Website}
-   \end{itemize}
-   \ressubheading{California Polytechnic State University}{San Luis Obispo, CA}{Bachelor of Science in Computer Science}{June 2013}
-   \begin{itemize}
-      \resitem{8 time recipient of Dean's List}
-   \end{itemize}
+   \resitem{Thesis: An Analysis of Generational Caching Implemented in a Production Website}
+\end{itemize}
+\ressubheading{California Polytechnic State University}{San Luis Obispo, CA}{Bachelor of Science in Computer Science}{June 2013}
+\begin{itemize}
+   \resitem{8 time recipient of Dean's List}
 \end{itemize}
 
 \resheading{Work Experience}
+\ressubheading{iFixit}{San Luis Obispo, CA}{Web Operations Engineer}{January 2015 - Present}
 \begin{itemize}
-\item
-   \ressubheading{iFixit}{San Luis Obispo, CA}{Web Operations Engineer}{January 2015 - Present}
-   \begin{itemize}
-      \resitem{Performed day-to-day operations to support new application features and improve the website's infrastructure on AWS}
-      \resitem{Automated common developer operations such as deploying code to make it easier, faster, and safer}
-      \resitem{Upgraded servers from CentOS 5.5 to Fedora 20 to improve stability and security}
-      \resitem{Participated in on-call rotation to respond to and resolve incidents}
-      \resitem{Added monitoring to send alerts to the relevant parties for malfunctioning systems}
-      \resitem{Wrote unit and integration tests for the machine configuration scripts and set up continuous integration to run them}
-   \end{itemize}
-   \ressubheading{iFixit}{San Luis Obispo, CA}{Software Developer}{June 2013 - July 2015}
-   \begin{itemize}
-      \resitem{Developed community features for iFixit and enterprise features for the SaaS Dozuki}
-      \resitem{Improved code quality by configuring a code style checker and adding it to continuous integration}
-      \resitem{Promoted continuous delivery by encouraging small and focused changesets that are deployed to production early and often}
-      \resitem{Published blog posts to the developer blog (itbrokeand.ifixit.com)}
-   \end{itemize}
-   \ressubheading{iFixit}{San Luis Obispo, CA}{Software Developer Intern}{February 2011 - June 2013}
-   \begin{itemize}
-      \resitem{Designed, implemented, and documented a public REST API to be consumed by mobile applications}
-      \resitem{Developed and released the open source iFixit Android app which now has a 4.3 stars and 800,000 total installations}
-   \end{itemize}
+   \resitem{Performed day-to-day operations to support new application features and improve the website's infrastructure on AWS}
+   \resitem{Automated common developer operations such as deploying code to make it easier, faster, and safer}
+   \resitem{Upgraded servers from CentOS 5.5 to Fedora 20 to improve stability and security}
+   \resitem{Participated in on-call rotation to respond to and resolve incidents}
+   \resitem{Added monitoring to send alerts to the relevant parties for malfunctioning systems}
+   \resitem{Wrote unit and integration tests for the machine configuration scripts and set up continuous integration to run them}
+\end{itemize}
+\ressubheading{iFixit}{San Luis Obispo, CA}{Software Developer}{June 2013 - July 2015}
+\begin{itemize}
+   \resitem{Developed community features for iFixit and enterprise features for the SaaS Dozuki}
+   \resitem{Improved code quality by configuring a code style checker and adding it to continuous integration}
+   \resitem{Promoted continuous delivery by encouraging small and focused changesets that are deployed to production early and often}
+   \resitem{Published blog posts to the developer blog (itbrokeand.ifixit.com)}
+\end{itemize}
+\ressubheading{iFixit}{San Luis Obispo, CA}{Software Developer Intern}{February 2011 - June 2013}
+\begin{itemize}
+   \resitem{Designed, implemented, and documented a public REST API to be consumed by mobile applications}
+   \resitem{Developed and released the open source iFixit Android app which now has a 4.3 stars and 800,000 total installations}
 \end{itemize}
 
 \resheading{Skills}
 
 \begin{description}
-\item[Languages:]
-PHP, Java, Javascript, Bash, Ruby, C/C{}\verb!++!, and \LaTeX
-\item[Web Development:]
-Experience developing web applications using PHP, HTML, CSS/less, JavaScript/MooTools, MySQL, Memcached, HAProxy, Varnish, and Apache
-\item[Unix:]
-Very comfortable on the Unix command line including tools such as Vim, Git, Bash, Zsh, and tmux
-\item[Amazon Web Services:]
-Extensive experience with Amazon EC2, EBS, S3, and security groups
+   \item[Languages:]
+   PHP, Java, Javascript, Bash, Ruby, C/C{}\verb!++!, and \LaTeX
+   \item[Web Development:]
+   Experience developing web applications using PHP, HTML, CSS/less, JavaScript/MooTools, MySQL, Memcached, HAProxy, Varnish, and Apache
+   \item[Unix:]
+   Very comfortable on the Unix command line including tools such as Vim, Git, Bash, Zsh, and tmux
+   \item[Amazon Web Services:]
+   Extensive experience with Amazon EC2, EBS, S3, and security groups
 \end{description}
 
 \resheading{Global Game Jam}
@@ -132,8 +135,8 @@ Extensive experience with Amazon EC2, EBS, S3, and security groups
 \resheading{Open Source Projects}
 
 \begin{description}
-\item[2014-Present] Author of the Matroyshka PHP caching library
-\item[2011-Present] Major contributor and maintainer of the iFixit Android app
+   \item[2014-Present] Author of the Matroyshka PHP caching library
+   \item[2011-Present] Major contributor and maintainer of the iFixit Android app
 \end{description}
 
 \end{document}
