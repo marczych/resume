@@ -14,7 +14,7 @@
 \usepackage{helvet}
 \usepackage[empty]{fullpage}
 \usepackage{color}
-\definecolor{mygrey}{gray}{0.80}
+\definecolor{gray}{gray}{0.5}
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
@@ -43,8 +43,15 @@
       #4
    \end{minipage}
 }
+\newcommand{\ressectiondivider}{
+   \vspace{5pt}
+   \textcolor{gray}{\hrule height 2pt}
+}
 \newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
-\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\resheading}[1]{
+   {\Large #1}
+   \ressectiondivider
+}
 \newcommand{\ressubheading}[4]{
    \begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
          \textbf{#1} & #2 \\
@@ -57,6 +64,8 @@
 \begin{document}
 
 \resauthor{Marc Zych}{805.217.4167}{marczych@gmail.com}{marczych.com}
+
+\vspace{20pt}
 
 \resheading{Education}
 \begin{itemize}
