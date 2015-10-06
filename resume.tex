@@ -14,7 +14,6 @@
 \usepackage{helvet}
 \usepackage[empty]{fullpage}
 \usepackage{color}
-\definecolor{gray}{gray}{0.5}
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
@@ -44,9 +43,7 @@
    \end{minipage}
 }
 \newcommand{\ressectiondivider}{
-   \vspace{5pt}
-   \textcolor{gray}{\hrule height 2pt}
-   \vspace{2.5pt}
+   \textcolor{black}{\hrule height 1pt}
 }
 \newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
 \newcommand{\ressubheading}[4]{
@@ -63,7 +60,9 @@
    \end{minipage}
 }
 \newenvironment{ressection}[1]{
+   \vspace{12pt}
    \ressectiondivider
+   \vspace{5pt}
    \begin{minipage}[t]{2.5cm}
       \flushleft
       {\Large #1}
@@ -79,8 +78,6 @@
 \begin{document}
 
 \resauthor{Marc Zych}{805.217.4167}{marczych@gmail.com}{marczych.com}
-
-\vspace{20pt}
 
 \begin{ressection}{Education}
    \ressubheading{California Polytechnic State University}{San Luis Obispo, CA}{Master of Science in Computer Science}{June 2013}
